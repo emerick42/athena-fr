@@ -17,10 +17,11 @@
 //= 1.4 Updated to match the new Izlude Map. [Masao]
 //= 1.5 Added some missing Eden Group Teleport Officers. [Masao]
 //= 1.6 Added Izlude RE coordinates. [Euphy]
+//===== Translated in French by: =============================
+//= Emerick42
 //============================================================
 
 moc_para01,27,35,5	script	Secretary Lime Evenor	952,{
-
 	if (checkweight(1201,1) == 0 || (MaxWeight - Weight) < 2000) {
 		mes "- Wait a minute !! -";
 		mes "- Currently you're carrying -";
