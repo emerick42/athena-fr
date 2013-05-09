@@ -21,122 +21,122 @@
 //= Emerick42
 //============================================================
 
-moc_para01,27,35,5	script	Secretary Lime Evenor	952,{
+moc_para01,27,35,5	script	Secretaire Lime Evenor	952,{
 	if (checkweight(1201,1) == 0 || (MaxWeight - Weight) < 2000) {
-		mes "- Wait a minute !! -";
-		mes "- Currently you're carrying -";
-		mes "- too many items with you. -";
-		mes "- Please try again -";
-		mes "- after you loose some weight. -";
+		mes "- Attendez une minute !! -";
+		mes "- Vous portez actuellement -";
+		mes "- trop d'objets sur vous. -";
+		mes "- Réessayez après avoir -";
+		mes "- perdu du poids. -";
 		close;
 	}
 	mes "[Lime Evenor]";
-	mes "People who follow their dreams and romances listen to me. We are representatives of the paradise called 'The garden of Eden' called the Eden group . There is no place like this anywhere.";
-	mes "Hello. Can I help you?";
+	mes "Les gens qui suivent leurs rêves et leur coeur m'écoutent. Nous sommes les représentants d'un paradis dénommé l'Eden Group. C'est un lieu unique dans ce monde.";
+	mes "Bonjour. Comment puis-je vous aider ?";
 	next;
 	while (1) {
-		switch (select("What is Eden group?:Join the Eden Group.:Register new mission.:Search for missions.:Cancel.")) {
+		switch (select("Qu'est-ce que l'Eden Group ?:Rejoindre l'Eden Group.:Enregistrer de nouvelles missions.:Rechercher des missions.:Annuler.")) {
 		case 1:
 			mes "[Lime Evenor]";
-			mes "Eden Group is a group that helps people who are suffering from distresses in Rune-Midgard.";
+			mes "L'Eden Group est un groupe qui aide les gens en détresse dans Rune Midgard.";
 			next;
 			mes "[Lime Evenor]";
-			mes "If people need help, we put up the case on the bulletin board and introduce it to our members who are eager to help those in need.";
+			mes "Si les gens ont besoin d'aide, nous plaçons leur demande sur un panneau d'affichage et nous la confions à nos membres désireux d'aider ceux dans le besoin.";
 			next;
 			mes "[Lime Evenor]";
-			mes "Eden members will review the missions and help those who post them up.";
-			mes "Members do these missions for rewards.";
+			mes "Les membres de l'Eden vont passer en revue les missions et aider ceux qui les ont postées.";
+			mes "Nos membres réalisent ces missions pour des récompenses.";
 			next;
 			mes "[Lime Evenor]";
-			mes "If you are not too familiar with Rune-Midgard, this is a great way to explore the world.";
-			mes "Or, if you are mature enough, you can travel the world and make new friends while doing missions. Your honorable name will be spread out among lands.";
+			mes "Si vous n'êtes pas familier avec Rune Midgard, c'est un bon moyen d'explorer le monde.";
+			mes "Et si vous avez assez d'expérience, vous pouvez voyager à travers le monde et vous faire de nouveaux amis en effectuant ces missions. Votre nom sera reconnu jusque dans les lointaines contrées.";
 			next;
 			break;
 		case 2:
 			if (countitem(6219) < 1) {
 				mes "[Lime Evenor]";
-				mes "You can be a Eden's member by simply registering with me.";
-				mes "Would you like to join Eden Group?";
+				mes "Vous pouvez devenir un membre de l'Eden simplement en vous enregistrant auprès de moi.";
+				mes "Souhaiteriez-vous rejoindre l'Eden Group ?";
 				next;
-				switch (select("Yes, I want to join.:No, I don't want to join.")) {
+				switch (select("Oui je veux vous rejoindre.:Non merci, ça ne m'intéresse pas.")) {
 				case 1:
 					mes "[Lime Evenor]";
-					mes "Aright. Excellent! Please write down your name here.";
+					mes "Ah, excellent ! S'il vous plait, écrivez votre nom ici.";
 					input .@input$;
 					next;
 					mes "[Lime Evenor]";
-					mes "Are you done?";
-					mes "Let me see.";
+					mes "Avez-vous fini ?";
+					mes "Laissez-moi voir.";
 					next;
 					mes "[Lime Evenor]";
-					mes "Your name is ^3131FFBo"+.@input$+"Ba^000000..? Is that right?";
-					mes "Huh? Isn't it??";
+					mes "Vous vous appelez ^3131FFBo"+.@input$+"Ba^000000..? C'est bien cela ?";
+					mes "Quoi ? Ce n'est pas ça ??";
 					next;
 					emotion e_swt;
 					mes "[Lime Evenor]";
-					mes "Hmm that isn't what you wrote?.";
-					mes "Ok, hmm, it seems a bit hard to read.";
+					mes "Hmmm, ce n'est pas ce que vous avez écrit ?";
+					mes "Ok... C'est un peu dur à lire.";
 					next;
 					mes "[Lime Evenor]";
-					mes "Would you please write your name again? Please write it ^3131FFClearly^000000.";
+					mes "Pourriez-vous ré-écrire votre nom s'il vous plait ? Et de manière ^3131FFClaire^000000.";
 					input .@input$;
 					next;
 					mes "[Lime Evenor]";
-					mes "Ah~ ha. You are ^3131FF"+strcharinfo(0)+"^000000.";
-					mes "I got it right this time.";
+					mes "Ah~ ha. Vous êtes ^3131FF"+strcharinfo(0)+"^000000.";
+					mes "Je l'ai eu bon cette fois.";
 					next;
 					emotion e_no1;
 					mes "[Lime Evenor]";
-					mes "We already put your name on the list.";
-					mes "Welcome to Eden's group new member!";
+					mes "Nous avons déjà mis votre nom sur la liste.";
+					mes "Bienvenue à l'Eden Group, nouveau membre !";
 					next;
 					mes "[Lime Evenor]";
-					mes "Hopefully you can do great work as an Eden's member.";
+					mes "Je suis certain que vous ferez de grandes choses en tant que membre de l'Eden.";
 					getitem 6219,1; //Para_Team_Mark
 					next;
 					break;
 				case 2:
 					mes "[Lime Evenor]";
-					mes "Do you still have questions about Eden Group?";
+					mes "Avez vous d'autres questions à propos de l'Eden Group ?";
 					next;
 					break;
 				}
 			} else {
 				mes "[Lime Evenor]";
-				mes "You are already a member of Eden Group.";
+				mes "Vous êtes déjà un membre de l'Eden Group.";
 				next;
 			}
 			break;
 		case 3:
 			mes "[Lime Evenor]";
-			mes "Do you want to register some missions that you want us to do?";
+			mes "Voulez-vous nous donner des missions à nous faire faire ?";
 			next;
-			if(select("Yes, I want to register.:No, I don't.") == 1) {
+			if(select("Oui je souhaiterai en enregistrer.:Non c'est bon.") == 1) {
 				mes "[Lime Evenor]";
-				mes "Alrigh. Please write down your name on it.";
+				mes "Bien. Veuillez écrire votre nom dessus.";
 				input .@input$;
 				next;
 				mes "[Lime Evenor]";
-				mes "^3131FF"+strcharinfo(0)+"^000000.. Is that your name?";
-				mes "Hmm, your handwriting is not clear. I can't read. it";
+				mes "^3131FF"+strcharinfo(0)+"^000000.. C'est bien votre nom ?";
+				mes "Hmmm, votre écriture n'est pas très claire. C'est difficile à lire.";
 				next;
 				mes "[Lime Evenor]";
-				mes "^3131FF"+strcharinfo(0)+"^000000, tell me what you want to register. for";
-				mes "Which map should we go to?";
+				mes "^3131FF"+strcharinfo(0)+"^000000, dites-moi ce que vous souhaiteriez enregistrer.";
+				mes "Où se passera la mission ?";
 				input .@input$;
 				next;
 				mes "[Lime Evenor]";
-				mes "^3131FFMission Map: "+.@inputstr$+"^000000";
-				mes "hum, I will note that.";
+				mes "^3131FFLieu de la Mission: "+.@inputstr$+"^000000";
+				mes "Bien, je vais noter ça.";
 				next;
 				mes "[Lime Evenor]";
-				mes "Please let me know what kind of missions your are lookng for.";
-				mes "It should be briefly like 'Hunt 10 Porings.'";
+				mes "S'il vous plait, dites moi quel type de mission vous recherchez.";
+				mes "Ce doit être court, comme 'Chasser 10 Porings'.";
 				input .@input$;
 				next;
 				mes "[Lime Evenor]";
-				mes "Are you done?";
-				mes "Let me check.";
+				mes "Avez-vous fini ?";
+				mes "Laissez-moi vérifier.";
 				next;
 				mes "[Lime Evenor]";
 				mes "Huh...........";
@@ -146,43 +146,43 @@ moc_para01,27,35,5	script	Secretary Lime Evenor	952,{
 				next;
 				emotion e_dots;
 				mes "[Lime Evenor]";
-				mes "I think you should complete one of our missions first before you take up a new mission.";
+				mes "Je pense que vous devriez terminer une de nos missions avant d'en prendre une nouvelle.";
 				next;
 				emotion e_pif;
 				mes "[Lime Evenor]";
 				mes "^3131FFClient: Lime Evenor^000000";
-				mes "^3131FFMission: Practice your handwriting for one month.^000000";
-				mes "You've got really bad penmanship!";
+				mes "^3131FFMission: Pratiquer votre écriture pour un mois.^000000";
+				mes "Vous écrivez vraiment mal !";
 				next;
 				mes "[Lime Evenor]";
 				mes "^3131FFMission:"+.@input$+"^000000";
-				mes "Anyway, you are done registering for a new mission.";
+				mes "En tout cas, vous avez enregistré cette nouvelle mission.";
 				next;
 				mes "[Lime Evenor]";
-				mes "Missions are fully booked. You have to wait for an spot to clear up.";
-				mes "Please kindly wait until your turn.";
+				mes "Il n'y a plus de place pour des missions actuellement. Vous allez devoir attendre qu'une place se libère.";
+				mes "Merci d'attendre gentiment votre tour.";
 				next;
 			}
 			break;
 		case 4:
 			if (countitem(6219) > 0) {
 				mes "[Lime Evenor]";
-				mes "Would like to try some missions as an Eden member?";
+				mes "Souhaiteriez-vous essayer quelques missions en tant que membre de l'Eden ?";
 				next;
 				mes "[Lime Evenor]";
-				mes "Check the right side of the bulletin board, there are various kinds of missions waiting for you.";
-				mes "Please carefully read the mission list and the qualifications and choose one of them.";
+				mes "Regardez sur les panneaux d'affichage, il y a différents types de mission qui vous attendent.";
+				mes "Et lisez attentivement la liste des missions et les qualifications requises avant d'en choisir une.";
 				next;
 			}
 			else {
 				mes "[Lime Evenor]";
-				mes "You need to join Eden Group first if you want to do some missions.";
+				mes "Vous devez rejoindre l'Eden Group si vous souhaitez faire nos missions.";
 				close;
 			}
 			break;
 		case 5:
 			mes "[Lime Evenor]";
-			mes "If you have any questions please come back again.";
+			mes "Si vous avez des questions, n'hésitez pas à revenir me voir.";
 			close;
 		}
 	}
